@@ -35,15 +35,21 @@ XF.define('Video', function() {
                     $.ajax({
                         url: XF.settings.dataUrlPrefix + 'tag',
                         type: 'POST',
-                        data: {
+                        crossDomain: true,
+                        dataType: 'json',
+                        contentType: 'application/json; charset=UTF-8',
+                        data: JSON.stringify({
                             name: decodeURIComponent($('.tag-name').val()),
                             url: decodeURIComponent($('.tag-desc').val())
-                        }
+                        })
                     }).done(function(data) {
                         $.ajax({
                             url: XF.settings.dataUrlPrefix + 'taglocation',
                             type: 'POST',
-                            data: {
+                            crossDomain: true,
+                            dataType: 'json',
+                            contentType: 'application/json; charset=UTF-8',
+                            data: JSON.stringify({
                                 tagId: data.id,
                                 videoId: self.component.options.videoId,
                                 timePosition: self.media.currentTime,
@@ -51,7 +57,7 @@ XF.define('Video', function() {
                                 R: 30,
                                 x: self.relativeCoords[0],
                                 y: self.relativeCoords[1]
-                            }
+                            })
                         });
 
                     });
