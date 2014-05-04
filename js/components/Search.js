@@ -26,7 +26,7 @@ XF.define('Search', function() {
 
         Collection: XF.Collection.extend({
             url: function() {
-                return XF.settings['dataUrlPrefix'] + 'taglocations?name=' + this.component.options.q;
+                return XF.settings['dataUrlPrefix'] + 'taglocations?tagName=' + this.component.options.q;
             }
         })
 

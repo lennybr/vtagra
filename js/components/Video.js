@@ -28,7 +28,7 @@ XF.define('Video', function() {
         },
 
         View: XF.View.extend({
-            initialize: function() {
+            bindTagSubmit: function() {
                 var self = this;
 
                 $('.tag-submit').on('click', function(e) {
@@ -36,15 +36,15 @@ XF.define('Video', function() {
                         url: XF.settings.dataUrlPrefix + 'tag',
                         type: 'POST',
                         data: {
-                            name: $('.tag-name').val(),
-                            description: $('.tag-desc').val()
+                            name: decodeURIComponent($('.tag-name').val()),
+                            url: decodeURIComponent($('.tag-desc').val())
                         }
                     }).done(function(data) {
                         $.ajax({
                             url: XF.settings.dataUrlPrefix + 'taglocation',
                             type: 'POST',
                             data: {
-                                tagId: data.tagId,
+                                tagId: data.id,
                                 videoId: self.component.options.videoId,
                                 timePosition: self.media.currentTime,
                                 duration: 10,
@@ -147,7 +147,7 @@ XF.define('Video', function() {
                     }
                 });
 
-
+                this.bindTagSubmit();
             },
 
             checkTags: function() {

@@ -130,9 +130,12 @@ XF.define('vtagra', function() {
                 $.ajax({
                     url: XF.settings.dataUrlPrefix + 'video',
                     type: 'POST',
-                    data: {
-                        'url': decodeURIComponent(url)
-                    }
+                    crossDomain: true,
+                    dataType: 'json',
+                    contentType: 'application/json; charset=UTF-8',
+                    data: JSON.stringify({
+                        'url': (url)
+                    })
                 }).done(function(data) {
                     XF.trigger('navigate', 'video/' + data.id);
                 }).fail(function() {
