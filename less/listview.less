@@ -1,0 +1,32 @@
+.listview {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2em;
+
+    li {
+        width: 100%;
+        border-bottom: 1px solid #ccc;
+        margin: 0;
+        padding: 1em 0;
+
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+
+        a {
+            cursor: pointer;
+        }
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+    }
+
+    &.listview-images {
+        li {
+            img {
+                margin: 1em 0;
+            }
+        }
+    }
+}

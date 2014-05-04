@@ -1,0 +1,13 @@
+<% if (!_.isEmpty(data)) { %>
+    <ul class="listview listview-images">
+        <% _.each(data, function (video, i) { %>
+            <li>
+                <a data-href="#video/<%= video.videoId %>">
+                    <img src="http://api.vtagra.com/image/<%= video.imageId %>" class="responsive" alt="<%= video.url %>" />
+                </a>
+            </li>
+        <% }); %>
+    </ul>
+<% } else {%>
+    Nothing found
+<% } %>

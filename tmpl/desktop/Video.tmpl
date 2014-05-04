@@ -1,0 +1,14 @@
+<% if (!_.isEmpty(data)) { %>
+    <video style="width: 100%; height: 100%;" id="player">
+        <source type="video/youtube" src="<%= data[0].url %>" />
+    </video>
+
+    <div class="popup">
+        <input class="tag-name" type="text" placeholder="tag" />
+        <input class="tag-desc" type="text" placeholder="url" />
+
+        <button class="tag-submit">SUBMIT</button>
+    </div>
+<% } else {%>
+    Video not found
+<% } %>

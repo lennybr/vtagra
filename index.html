@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <title>vtagra</title>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <link rel="stylesheet" href="css/vtagra.dev.css">
+
+</head>
+<body>
+    <div id="main">
+        <div class="container container-centered">
+            <div class="container-centered-cell">
+                <img class="logo" src="img/vtagra.svg" alt="" /> 
+                <form>
+                    <ul class="pills">
+                        <li class="active" data-url="#search/" data-placeholder="Search for videos">Search</li>
+                        <li data-add-class="true" data-url="#add/" data-placeholder="youtube.com/watch?v=XXXXXX">Add</li>
+                    </ul>
+                    <input type="text" class="input-large" placeholder="Search for videos" />
+                    <a class="btn btn-embedded btn-embedded-icon" data-url="#search/"></a>
+                </form>
+
+                
+            </div>
+        </div>
+    </div>
+
+    <div id="search">
+        <div class="component-padded" data-id="search" data-component="Search"></div>
+    </div>
+
+    <div id="add">
+        <div class="component-padded">
+            <div class="loader"></div>
+        </div>
+    </div>
+
+    <div id="video">
+        <div class="component-padded" data-id="video" data-component="Video">
+            <div class="loader"></div>
+        </div>
+    </div>
+    
+    <div class="popup-circle"></div>
+    <div class="popup-line"></div>
+    
+
+
+    <script src="js/lib/jquery/jquery.min.js"></script>
+    <script src="js/jquery.transit.js"></script>
+    <script src="js/lib/underscore/underscore-min.js"></script>
+    <script src="js/lib/backbone/backbone-min.js"></script>
+    <script src="js/xf.js"></script>
+    <link rel="stylesheet" href="js/lib/mediaelement/mediaelementplayer.min.css" />
+    <script src="js/lib/mediaelement/mediaelement-and-player.min.js"></script>
+    <!-- standalone collections, views and models -->
+    <script src="js/app.js"></script>
+
+</body>
+</html>

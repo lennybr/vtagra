@@ -1,0 +1,131 @@
+.popup {
+    margin-top: 50px;
+    background-color: white;
+    padding: 1em 2em;
+    width: 100%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: none;
+    background-color: #BB7EE6;
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        right bottom,
+        color-stop(0.2, #BB7EE6),
+        color-stop(1, #3BF5E9)
+    );
+    background-image: -o-linear-gradient(right bottom, #BB7EE6 20%, #3BF5E9 100%);
+    background-image: -moz-linear-gradient(right bottom, #BB7EE6 20%, #3BF5E9 100%);
+    background-image: -webkit-linear-gradient(right bottom, #BB7EE6 20%, #3BF5E9 100%);
+    background-image: -ms-linear-gradient(right bottom, #BB7EE6 20%, #3BF5E9 100%);
+    background-image: linear-gradient(to right bottom, #BB7EE6 20%, #3BF5E9 100%);
+
+
+    button {
+        width: 100%;
+        padding: .75em 0;
+        text-align: center;
+        letter-spacing: 1px;
+        font-weight: 100;
+        border: none;
+        background-color: white;
+        color: #BB7EE6;
+        border-radius: 0;
+        -webkit-appearance: none;
+    }
+}
+
+.popup-line {
+    position: absolute;
+    width: 2px;
+    display: none;
+    height: 100px;
+    background-image: -webkit-gradient(
+        linear,
+        center top,
+        center bottom,
+        color-stop(0.2, #3BF5E9),
+        color-stop(1, #BB7EE6)
+    );
+    background-image: -o-linear-gradient(top bottom, #3BF5E9 20%, #BB7EE6 100%);
+    background-image: -moz-linear-gradient(top bottom, #3BF5E9 20%, #BB7EE6 100%);
+    background-image: -webkit-linear-gradient(top bottom, #3BF5E9 20%, #BB7EE6 100%);
+    background-image: -ms-linear-gradient(top bottom, #3BF5E9 20%, #BB7EE6 100%);
+    background-image: linear-gradient(to center bottom, #3BF5E9 20%, #BB7EE6 100%);
+
+}
+
+.popup-circle {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 10em;
+    border: 2px solid #3BF5E9;
+    background-color: white;
+    display: none;
+}
+
+.tag, .tag-content {
+    background-color: rgba(187,126,230,1);
+    color: rgba(255,255,255,1);
+    position: absolute; 
+    z-index: 3;
+    display: none;
+    opacity: 0.4;
+    cursor: pointer;
+    font-size: 0.7em;
+
+    a {
+        color: white;
+    }
+
+    p {
+        margin: 5px 0 0;
+    }
+
+    .pointer {
+        z-index: 3;
+    }
+    
+
+    &:hover {
+        opacity: 1;
+
+        .tag-content {
+            display: block;
+            opacity: 1;
+        }
+    }
+}
+
+.tag-content {
+    display: none;
+    padding: 3px 6px;
+    z-index: 2;
+}
+
+
+
+.pointer, .ptag {
+    position: absolute;
+    display: block;
+    top: -6px;
+    left: -6px;
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 10em;
+    border: 2px solid #3BF5E9;
+    background-color: white;
+}
+
+.ptag {
+    top: 8px;
+    width: 2px;
+    height: 14px;
+    border: none;
+    background-color: #3BF5E9;
+    z-index: 2;
+    opacity: 0.8;
+    cursor: pointer;
+}

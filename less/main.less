@@ -1,0 +1,64 @@
+#main {
+    background-color: #BB7EE6;
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        right bottom,
+        color-stop(0.2, #BB7EE6),
+        color-stop(1, #3BF5E9)
+    );
+    background-image: -o-linear-gradient(right bottom, #BB7EE6 20%, #3BF5E9 100%);
+    background-image: -moz-linear-gradient(right bottom, #BB7EE6 20%, #3BF5E9 100%);
+    background-image: -webkit-linear-gradient(right bottom, #BB7EE6 20%, #3BF5E9 100%);
+    background-image: -ms-linear-gradient(right bottom, #BB7EE6 20%, #3BF5E9 100%);
+    background-image: linear-gradient(to right bottom, #BB7EE6 20%, #3BF5E9 100%);
+
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    padding: 1em;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    color: white;
+
+    .container {
+        max-width: 400px;
+    }
+
+    .pills {
+        li {
+            width: 50%;
+        }
+    }
+
+    input {
+        margin-bottom: 0;
+        padding-right: 2.5em;
+    }
+
+    form {
+        position: relative;
+    }
+
+    .btn-embedded {
+        position: absolute;
+        right: 1em;
+        bottom: 0.75em;
+        -webkit-transition: all 0.3s ease;                  
+        -moz-transition: all 0.3s ease;                 
+        -o-transition: all 0.3s ease;   
+        -ms-transition: all 0.3s ease;          
+        transition: all 0.3s ease;
+    }
+
+    &.fixed {
+        position: fixed;
+
+        @media (max-width: 767px) {
+            padding-left: 8%;
+        }
+    }
+}

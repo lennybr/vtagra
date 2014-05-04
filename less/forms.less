@@ -1,0 +1,94 @@
+input {
+    width: 100%;
+    margin: 0;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 0.5em 1em;
+    outline-style: none;
+    margin-bottom: 1em;
+    -webkit-appearance: none;
+    box-shadow: none;
+
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    &.input-large {
+        font-size: 1.5em;
+        margin-bottom: 2em;
+    }
+}
+
+::-webkit-input-placeholder {
+   color: rgba(255,255,255,0.3);
+   letter-spacing: 1px;
+}
+
+:-moz-placeholder { 
+   color: rgba(255,255,255,0.3);
+   letter-spacing: 1px;
+}
+
+::-moz-placeholder {  
+   color: rgba(255,255,255,0.3);
+   letter-spacing: 1px;
+}
+
+:-ms-input-placeholder { 
+   color: rgba(255,255,255,0.3);
+   letter-spacing: 1px;
+}
+
+.btn {
+
+    &.btn-rounded {
+        display: inline-block;
+        border: 2px solid white;
+        border-radius: 10em;
+        padding: 0;
+        line-height: 3em;
+        color: white;
+        text-decoration: none;
+        width: 3em;
+        height: 3em;
+        outline-style: none;
+
+        &.btn-large {
+            font-size: 4em;
+            width: 1em;
+            height: 1em;
+            line-height: .85em;
+            font-weight: 100;
+            position: relative;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+
+            img {
+                width: .55em;
+                height: .55em;
+            }
+        }
+    }
+
+    &.btn-large {
+        font-size: 1.5em;
+    }
+}
+
+.btn-embedded {
+    cursor: pointer;
+    width: 2em;
+    height: 2em;
+    display: inline-block;
+    outline:none;
+
+    &.btn-embedded-icon {
+        background: url('../img/icons.svg') no-repeat;
+        background-size: 2em;
+
+        &.btn-embedded-icon-add {
+            background-position: 0 -2em;
+        }
+    }
+}
+
