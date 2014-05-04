@@ -74,8 +74,11 @@ XF.define('Video', function() {
                     eh = $vid.height(),
                     ex = $vid.offset().left,
                     ey = $vid.offset().top,
-                    px = this.coords[0] - ex - 3,
-                    py = this.coords[1] - ey - 3;
+                    px = (this.coords[0] - ex - 3) / ew,
+                    py = (this.coords[1] - ey - 3) / eh;
+
+                px = Math.round(px * 100) / 100;
+                py = Math.round(py * 100) / 100;
 
                 this.relativeCoords = [px, py];
             },
